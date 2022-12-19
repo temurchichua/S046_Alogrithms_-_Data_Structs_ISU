@@ -29,6 +29,7 @@ def knapsack(target_weight: int) -> list:
                     value,  # value of the item itself
                     value + value_table[i - 1][j - weight]  # check if we still can fit leftover weight [j
                 )
+
             else:
                 condition = "else"
                 # we store the solution for the previous (smaller) item

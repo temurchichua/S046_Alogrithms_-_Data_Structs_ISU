@@ -5,7 +5,7 @@
 # with the corresponding optimal decompositions. Double-check your answer by writing and running the dynamic
 # programming algorithm with recursive top-down implementation.
 
-P = (2, 7, 10, 11, 12, 19, 20, 25, 28, 30)  # Price Table
+P = (3, 5, 7, 9, 12, 13, 16, 21, 23, 24, 28, 32)  # Price Table
 
 
 # Top Down Recursive Approach
