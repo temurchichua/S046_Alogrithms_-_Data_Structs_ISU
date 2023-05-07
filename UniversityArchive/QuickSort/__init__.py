@@ -1,8 +1,6 @@
 import random
 
 TEST = 0
-
-
 def quick_sort(array):
     size = len(array)
     if size < 2:
