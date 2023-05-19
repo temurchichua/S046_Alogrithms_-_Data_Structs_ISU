@@ -1,13 +1,15 @@
-n: int = 5  # number of nodes in graph
-g = list()  # adjacency list representing graph
-visited = [False] * n  # list of boolean values representing if node at index has been visited
+def dfs(grid, sr, sc):
+    R, C = len(grid), len(grid[0])
 
-start_node = 0
-
-
-def dfs(at):
-    if visited[at]:
+    # Base cases
+    if not (0 <= sr < R and 0 <= sc < C) or grid[sr][sc] == 0:
         return
 
-    visited[at] = True
+    # Mark current cell as visited
+    grid[sr][sc] = 0
 
+    # Recursive calls for neighboring cells
+    dfs(grid, sr-1, sc)  # Up
+    dfs(grid, sr+1, sc)  # Down
+    dfs(grid, sr, sc-1)  # Left
+    dfs(grid, sr, sc+1)  # Right
